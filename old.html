@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tiburg</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Arimo|Poppins');
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="loader"></div>
+    <nav>
+      <h1>tiburg</h1>
+      <p>Ulrike Tinnacher, Alexandra Isele, Leo Habsburg</p>
+      <p>Kranzgasse 18 / 3 1150 Wien</p>
+    </nav>
+    <div id="left">
+      <div class="cell"><img src="http://ulriketinnacher.at/wp-content/themes/light-ulrike-tinnacher-wp_theme/inc/resize.php?src=http://ulriketinnacher.at/wp-content/uploads/2019/01/5.jpg&w=600&q=95" alt="" /></div>
+      <div class="cell"><img src="http://ulriketinnacher.at/wp-content/themes/light-ulrike-tinnacher-wp_theme/inc/resize.php?src=http://ulriketinnacher.at/wp-content/uploads/2018/11/201810-LT-341.jpg&w=600&q=95" alt="" /></div>
+      <div class="cell"><img src="http://ulriketinnacher.at/wp-content/themes/light-ulrike-tinnacher-wp_theme/inc/resize.php?src=http://ulriketinnacher.at/wp-content/uploads/2018/11/201810-LT-519.jpg&w=600&q=95" alt="" /></div>
+      <div class="cell"><img src="http://ulriketinnacher.at/wp-content/themes/light-ulrike-tinnacher-wp_theme/inc/resize.php?src=http://ulriketinnacher.at/wp-content/uploads/2017/08/DSC9502.jpg&w=600&q=95" alt="" /></div>
+      <div class="cell"><img src="http://ulriketinnacher.at/wp-content/themes/light-ulrike-tinnacher-wp_theme/inc/resize.php?src=http://ulriketinnacher.at/wp-content/uploads/2016/01/201511xx-tinnacher-01_01.jpg&w=600&q=95" alt="" /></div>
+      <div class="cell"><img src="http://ulriketinnacher.at/wp-content/themes/light-ulrike-tinnacher-wp_theme/inc/resize.php?src=http://ulriketinnacher.at/wp-content/uploads/2013/03/lageplan_1.jpg&w=600&q=95" alt="" /></div>
+
+    </div>
+    <div id="right">
+      <div id="rightCells">
+        <div class="cell"><img src="http://ulriketinnacher.at/wp-content/themes/light-ulrike-tinnacher-wp_theme/inc/resize.php?src=http://ulriketinnacher.at/wp-content/uploads/2017/08/DSC9502.jpg&w=600&q=95" alt="" /></div>
+        <div class="cell"><img src="http://ulriketinnacher.at/wp-content/themes/light-ulrike-tinnacher-wp_theme/inc/resize.php?src=http://ulriketinnacher.at/wp-content/uploads/2016/01/201511xx-tinnacher-01_01.jpg&w=600&q=95" alt="" /></div>
+        <div class="cell"><img src="http://ulriketinnacher.at/wp-content/themes/light-ulrike-tinnacher-wp_theme/inc/resize.php?src=http://ulriketinnacher.at/wp-content/uploads/2013/03/lageplan_1.jpg&w=600&q=95" alt="" /></div>
+        <div class="cell"><img src="http://ulriketinnacher.at/wp-content/themes/light-ulrike-tinnacher-wp_theme/inc/resize.php?src=http://ulriketinnacher.at/wp-content/uploads/2019/01/5.jpg&w=600&q=95" alt="" /></div>
+        <div class="cell"><img src="http://ulriketinnacher.at/wp-content/themes/light-ulrike-tinnacher-wp_theme/inc/resize.php?src=http://ulriketinnacher.at/wp-content/uploads/2018/11/201810-LT-341.jpg&w=600&q=95" alt="" /></div>
+        <div class="cell"><img src="http://ulriketinnacher.at/wp-content/themes/light-ulrike-tinnacher-wp_theme/inc/resize.php?src=http://ulriketinnacher.at/wp-content/uploads/2018/11/201810-LT-519.jpg&w=600&q=95" alt="" /></div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    (function ($)
+    {
+      $(window).on("load", function ()
+      {
+        $('.loader').hide();
+        $("#left").on("scroll", function ()
+        {
+          var scrolledleft = parseInt($("#left").scrollTop()) * -1;
+          $("#right").scrollTop(scrolledleft + scrolledright)
+        })
+        //Move right column to bottom initially
+        $("#right").scrollTop($("#rightCells").height())
+        //Get actual distance scrolled
+        var scrolledright = parseInt($("#right").scrollTop())
+      })
+    })(jQuery);
+  </script>
+
+</html>
